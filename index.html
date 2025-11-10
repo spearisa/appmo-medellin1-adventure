@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medellin1 Adventure</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d4ff',
+                        secondary: '#ff00c8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+        }
+        .hero-bg {
+            background: url('http://static.photos/cityscape/1200x630/42') no-repeat center center;
+            background-size: cover;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #00d4ff, #ff00c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-effect py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <i data-feather="map-pin" class="text-primary"></i>
+            <span class="text-xl font-bold">Medellin<span class="text-primary">1</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#" class="hover:text-primary transition">Home</a>
+            <a href="#" class="hover:text-primary transition">Attractions</a>
+            <a href="#" class="hover:text-primary transition">Culture</a>
+            <a href="#" class="hover:text-primary transition">Events</a>
+            <a href="#" class="hover:text-primary transition">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <i data-feather="menu"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div id="vanta-bg" class="absolute inset-0 z-0"></div>
+        <div class="container mx-auto px-6 z-10">
+            <div class="glass-effect rounded-2xl p-8 max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Discover the <span class="text-gradient">City of Eternal Spring</span>
+                </h1>
+                <p class="text-lg mb-6">
+                    Medellín, Colombia's second-largest city, offers a vibrant mix of culture, innovation, and natural beauty. 
+                    Experience the transformation of this incredible city through its people, food, and landscapes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
+                        Explore Attractions
+                    </button>
+                    <button class="glass-effect text-white font-bold py-3 px-6 rounded-full transition hover:bg-white/10">
+                        Plan Your Trip
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Visit Medellín?</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">
+                    From innovative transportation to world-class dining, Medellín offers unforgettable experiences
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass-effect rounded-2xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                        <i data-feather="sun" class="text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Perfect Climate</h3>
+                    <p class="text-gray-300">
+                        Known as the "City of Eternal Spring," Medellín enjoys a year-round spring-like climate with average temperatures of 22°C (72°F).
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="glass-effect rounded-2xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mb-6">
+                        <i data-feather="coffee" class="text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Coffee Culture</h3>
+                    <p class="text-gray-300">
+                        As the heart of Colombia's coffee region, Medellín offers exceptional coffee experiences from traditional cafes to modern roasteries.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="glass-effect rounded-2xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-6">
+                        <i data-feather="users" class="text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovative City</h3>
+                    <p class="text-gray-300">
+                        Medellín has transformed into one of Latin America's most innovative cities, recognized for its urban development and entrepreneurship.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section class="py-20 bg-black/20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Top Attractions</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">
+                    Explore the must-see destinations that make Medellín unique
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Attraction 1 -->
+                <div class="rounded-2xl overflow-hidden card-hover">
+                    <img src="http://static.photos/nature/640x360/1" alt="Comuna 13" class="w-full h-48 object-cover">
+                    <div class="glass-effect p-6">
+                        <h3 class="text-xl font-bold mb-2">Comuna 13</h3>
+                        <p class="text-gray-300 text-sm">
+                            Vibrant neighborhood with street art and cultural tours
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Attraction 2 -->
+                <div class="rounded-2xl overflow-hidden card-hover">
+                    <img src="http://static.photos/aerial/640x360/2" alt="Metrocable" class="w-full h-48 object-cover">
+                    <div class="glass-effect p-6">
+                        <h3 class="text-xl font-bold mb-2">Metrocable</h3>
+                        <p class="text-gray-300 text-sm">
+                            Scenic cable car rides with panoramic city views
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Attraction 3 -->
+                <div class="rounded-2xl overflow-hidden card-hover">
+                    <img src="http://static.photos/people/640x360/3" alt="Botero Plaza" class="w-full h-48 object-cover">
+                    <div class="glass-effect p-6">
+                        <h3 class="text-xl font-bold mb-2">Botero Plaza</h3>
+                        <p class="text-gray-300 text-sm">
+                            Cultural hub with Botero sculptures and museums
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Attraction 4 -->
+                <div class="rounded-2xl overflow-hidden card-hover">
+                    <img src="http://static.photos/nature/640x360/4" alt="Arvi Park" class="w-full h-48 object-cover">
+                    <div class="glass-effect p-6">
+                        <h3 class="text-xl font-bold mb-2">Arvi Park</h3>
+                        <p class="text-gray-300 text-sm">
+                            Ecological reserve with hiking trails and wildlife
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Upcoming Events</h2>
+                <p class="max-w-2xl mx-auto text-gray-300">
+                    Experience Medellín's vibrant cultural calendar
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass-effect rounded-2xl p-8 flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary/20 w-24 h-24 rounded-xl flex flex-col items-center justify-center">
+                            <span class="text-2xl font-bold">JUN</span>
+                            <span class="text-3xl font-bold">15</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-primary font-bold">Festival</span>
+                        <h3 class="text-2xl font-bold my-2">Medellín Flower Festival</h3>
+                        <p class="text-gray-300 mb-4">
+                            Annual celebration of Antioquia's flower-growing tradition with parades, concerts, and cultural events.
+                        </p>
+                        <button class="text-primary font-bold flex items-center">
+                            Learn More
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-8 flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <div class="bg-secondary/20 w-24 h-24 rounded-xl flex flex-col items-center justify-center">
+                            <span class="text-2xl font-bold">AUG</span>
+                            <span class="text-3xl font-bold">07</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-secondary font-bold">Celebration</span>
+                        <h3 class="text-2xl font-bold my-2">Independence Day</h3>
+                        <p class="text-gray-300 mb-4">
+                            National holiday celebrations with fireworks, concerts, and traditional festivities throughout the city.
+                        </p>
+                        <button class="text-secondary font-bold flex items-center">
+                            Learn More
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="map-pin" class="text-primary"></i>
+                        <span class="text-xl font-bold">Medellin<span class="text-primary">1</span></span>
+                    </div>
+                    <p class="text-gray-300">
+                        Your ultimate guide to exploring the vibrant city of Medellín, Colombia.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Explore</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Attractions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Restaurants</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Events</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Information</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="glass-effect w-10 h-10 rounded-full flex items-center justify-center">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="#" class="glass-effect w-10 h-10 rounded-full flex items-center justify-center">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="#" class="glass-effect w-10 h-10 rounded-full flex items-center justify-center">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="glass-effect w-10 h-10 rounded-full flex items-center justify-center">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 Medellin1 Adventure. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x00d4ff,
+            color2: 0xff00c8,
+            backgroundColor: 0x000000
+        });
+    </script>
+</body>
+</html>
